@@ -1,10 +1,6 @@
 services:
-  - name: banking-service
-    type: web  # 'web' for web service; 'static' for static site
-    env: node  # Can be 'node', 'python', 'docker', etc.
-    plan: free  # Use 'starter', 'pro', or 'free'
-    buildCommand: "npm install"  # Command to install dependencies
-    startCommand: "npm start"  # Command to start your service
-    envVars:
-      - key: DATABASE_URL
-        value: postgres://your-db-connection
+  - name: banking-java-service
+    type: web
+    env: docker  # Using Docker for Java deployments
+    dockerfilePath: ./Dockerfile
+    plan: free
