@@ -1,6 +1,0 @@
-services:
-  - name: banking-java-service
-    type: web
-    env: docker  # Using Docker for Java deployments
-    dockerfilePath: ./Dockerfile
-    plan: free
